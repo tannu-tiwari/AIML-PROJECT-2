@@ -1,0 +1,81 @@
+{
+  "cv_5fold": {
+    "Linear Regression": {
+      "MAE": 3.4484,
+      "MAE_std": 0.1575,
+      "RMSE": 4.4603,
+      "RMSE_std": 0.275,
+      "R2": 0.01,
+      "R2_std": 0.159
+    },
+    "Ridge Regression": {
+      "MAE": 3.3415,
+      "MAE_std": 0.1745,
+      "RMSE": 4.3306,
+      "RMSE_std": 0.2632,
+      "R2": 0.0708,
+      "R2_std": 0.1188
+    },
+    "Random Forest Regressor": {
+      "MAE": 2.9164,
+      "MAE_std": 0.2691,
+      "RMSE": 3.829,
+      "RMSE_std": 0.3282,
+      "R2": 0.2785,
+      "R2_std": 0.0683
+    },
+    "Gradient Boosting Regressor": {
+      "MAE": 3.0782,
+      "MAE_std": 0.2881,
+      "RMSE": 4.077,
+      "RMSE_std": 0.337,
+      "R2": 0.1779,
+      "R2_std": 0.1174
+    },
+    "XGBoost Regressor": {
+      "MAE": 3.0402,
+      "MAE_std": 0.3146,
+      "RMSE": 3.9855,
+      "RMSE_std": 0.3843,
+      "R2": 0.2153,
+      "R2_std": 0.1221
+    }
+  },
+  "test_evaluation": {
+    "Linear Regression": {
+      "MAE": 3.3993,
+      "MSE": 19.0988,
+      "RMSE": 4.3702,
+      "R2": 0.0978,
+      "Max_Error": 11.6272
+    },
+    "Ridge Regression": {
+      "MAE": 3.3964,
+      "MSE": 18.8534,
+      "RMSE": 4.342,
+      "R2": 0.1094,
+      "Max_Error": 11.8807
+    },
+    "Random Forest Regressor": {
+      "MAE": 2.9047,
+      "MSE": 15.5671,
+      "RMSE": 3.9455,
+      "R2": 0.2646,
+      "Max_Error": 12.7653
+    },
+    "Gradient Boosting Regressor": {
+      "MAE": 2.9653,
+      "MSE": 15.5431,
+      "RMSE": 3.9425,
+      "R2": 0.2658,
+      "Max_Error": 11.8919
+    },
+    "XGBoost Regressor": {
+      "MAE": 2.9902,
+      "MSE": 15.3966,
+      "RMSE": 3.9238,
+      "R2": 0.2727,
+      "Max_Error": 11.7042
+    }
+  }
+}

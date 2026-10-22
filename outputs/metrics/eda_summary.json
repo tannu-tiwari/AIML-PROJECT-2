@@ -1,0 +1,44 @@
+{
+  "dataset_name": "UCI Student Performance (Mathematics)",
+  "total_records": 395,
+  "total_attributes": 33,
+  "target_variable": "G3",
+  "target_stats": {
+    "mean": 10.415,
+    "std": 4.581,
+    "median": 11.0,
+    "iqr": 6.0,
+    "min": 0,
+    "max": 20
+  },
+  "risk_classification_stats": {
+    "pass_count (G3>=10)": 265,
+    "fail_count (G3<10)": 130,
+    "fail_rate": 0.3291
+  },
+  "top_correlations_with_G3": {
+    "G2": 0.905,
+    "G1": 0.801,
+    "Medu": 0.217,
+    "Fedu": 0.152,
+    "studytime": 0.098,
+    "famrel": 0.051,
+    "absences": 0.034,
+    "freetime": 0.011,
+    "Walc": -0.052,
+    "Dalc": -0.055,
+    "health": -0.061,
+    "traveltime": -0.117,
+    "goout": -0.133,
+    "age": -0.162,
+    "failures": -0.36
+  },
+  "data_quality": {
+    "total_records": 395,
+    "total_columns": 33,
+    "missing_values": 0,
+    "duplicate_records": 0,
+    "range_violations": {},
+    "is_valid": true
+  }
+}

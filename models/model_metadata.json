@@ -1,0 +1,433 @@
+{
+  "project": "EduPredict AI",
+  "timestamp": "2026-10-22T11:33:07.294815",
+  "training_duration_seconds": 5.61,
+  "scenario": "early_prediction",
+  "include_prior_grades": false,
+  "dataset_info": {
+    "scenario": "early_prediction",
+    "n_samples": 395,
+    "n_train": 316,
+    "n_test": 79,
+    "n_features": 30,
+    "categorical_count": 17,
+    "numeric_count": 13,
+    "test_size": 0.2,
+    "random_state": 42,
+    "target_reg_mean": 10.415189873417722,
+    "target_reg_std": 4.5814426109978434,
+    "risk_rate_overall": 0.3291139240506329,
+    "risk_rate_train": 0.3291139240506329,
+    "risk_rate_test": 0.3291139240506329,
+    "validation_summary": {
+      "total_records": 395,
+      "total_columns": 33,
+      "missing_values": 0,
+      "duplicate_records": 0,
+      "range_violations": {},
+      "is_valid": true
+    }
+  },
+  "features": {
+    "raw_feature_count": 30,
+    "raw_features": [
+      "school",
+      "sex",
+      "age",
+      "address",
+      "famsize",
+      "Pstatus",
+      "Medu",
+      "Fedu",
+      "Mjob",
+      "Fjob",
+      "reason",
+      "guardian",
+      "traveltime",
+      "studytime",
+      "failures",
+      "schoolsup",
+      "famsup",
+      "paid",
+      "activities",
+      "nursery",
+      "higher",
+      "internet",
+      "romantic",
+      "famrel",
+      "freetime",
+      "goout",
+      "Dalc",
+      "Walc",
+      "health",
+      "absences"
+    ],
+    "categorical_features": [
+      "school",
+      "sex",
+      "address",
+      "famsize",
+      "Pstatus",
+      "Mjob",
+      "Fjob",
+      "reason",
+      "guardian",
+      "schoolsup",
+      "famsup",
+      "paid",
+      "activities",
+      "nursery",
+      "higher",
+      "internet",
+      "romantic"
+    ],
+    "numeric_features": [
+      "age",
+      "Medu",
+      "Fedu",
+      "traveltime",
+      "studytime",
+      "failures",
+      "famrel",
+      "freetime",
+      "goout",
+      "Dalc",
+      "Walc",
+      "health",
+      "absences"
+    ],
+    "transformed_feature_count": 56,
+    "transformed_features": [
+      "school_GP",
+      "school_MS",
+      "sex_F",
+      "sex_M",
+      "address_R",
+      "address_U",
+      "famsize_GT3",
+      "famsize_LE3",
+      "Pstatus_A",
+      "Pstatus_T",
+      "Mjob_at_home",
+      "Mjob_health",
+      "Mjob_other",
+      "Mjob_services",
+      "Mjob_teacher",
+      "Fjob_at_home",
+      "Fjob_health",
+      "Fjob_other",
+      "Fjob_services",
+      "Fjob_teacher",
+      "reason_course",
+      "reason_home",
+      "reason_other",
+      "reason_reputation",
+      "guardian_father",
+      "guardian_mother",
+      "guardian_other",
+      "schoolsup_no",
+      "schoolsup_yes",
+      "famsup_no",
+      "famsup_yes",
+      "paid_no",
+      "paid_yes",
+      "activities_no",
+      "activities_yes",
+      "nursery_no",
+      "nursery_yes",
+      "higher_no",
+      "higher_yes",
+      "internet_no",
+      "internet_yes",
+      "romantic_no",
+      "romantic_yes",
+      "age",
+      "Medu",
+      "Fedu",
+      "traveltime",
+      "studytime",
+      "failures",
+      "famrel",
+      "freetime",
+      "goout",
+      "Dalc",
+      "Walc",
+      "health",
+      "absences"
+    ]
+  },
+  "selected_models": {
+    "regression": {
+      "algorithm": "Random Forest Regressor",
+      "hyperparameters": {
+        "bootstrap": "True",
+        "ccp_alpha": "0.0",
+        "criterion": "squared_error",
+        "max_depth": "6",
+        "max_features": "1.0",
+        "max_leaf_nodes": "None",
+        "max_samples": "None",
+        "min_impurity_decrease": "0.0",
+        "min_samples_leaf": "1",
+        "min_samples_split": "4",
+        "min_weight_fraction_leaf": "0.0",
+        "monotonic_cst": "None",
+        "n_estimators": "100",
+        "n_jobs": "None",
+        "oob_score": "False",
+        "random_state": "42",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "cross_validation_5fold": {
+        "MAE": 2.9164,
+        "MAE_std": 0.2691,
+        "RMSE": 3.829,
+        "RMSE_std": 0.3282,
+        "R2": 0.2785,
+        "R2_std": 0.0683
+      },
+      "held_out_test_metrics": {
+        "MAE": 2.9047,
+        "MSE": 15.5671,
+        "RMSE": 3.9455,
+        "R2": 0.2646,
+        "Max_Error": 12.7653
+      }
+    },
+    "classification": {
+      "algorithm": "Logistic Regression",
+      "hyperparameters": {
+        "C": "1.0",
+        "class_weight": "balanced",
+        "dual": "False",
+        "fit_intercept": "True",
+        "intercept_scaling": "1",
+        "l1_ratio": "0.0",
+        "max_iter": "1000",
+        "n_jobs": "None",
+        "penalty": "deprecated",
+        "random_state": "42",
+        "solver": "lbfgs",
+        "tol": "0.0001",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "cross_validation_5fold": {
+        "Accuracy": 0.6138,
+        "Precision": 0.4364,
+        "Recall": 0.5395,
+        "F1_Score": 0.478,
+        "ROC_AUC": 0.6311
+      },
+      "held_out_test_metrics": {
+        "Accuracy": 0.6962,
+        "Precision": 0.5294,
+        "Recall": 0.6923,
+        "F1_Score": 0.6,
+        "ROC_AUC": 0.7271,
+        "Brier_Score": 0.2106,
+        "Confusion_Matrix": [
+          [
+            37,
+            16
+          ],
+          [
+            8,
+            18
+          ]
+        ]
+      }
+    }
+  },
+  "all_benchmarked_models": {
+    "regression_cv": {
+      "Linear Regression": {
+        "MAE": 3.4484,
+        "MAE_std": 0.1575,
+        "RMSE": 4.4603,
+        "RMSE_std": 0.275,
+        "R2": 0.01,
+        "R2_std": 0.159
+      },
+      "Ridge Regression": {
+        "MAE": 3.3415,
+        "MAE_std": 0.1745,
+        "RMSE": 4.3306,
+        "RMSE_std": 0.2632,
+        "R2": 0.0708,
+        "R2_std": 0.1188
+      },
+      "Random Forest Regressor": {
+        "MAE": 2.9164,
+        "MAE_std": 0.2691,
+        "RMSE": 3.829,
+        "RMSE_std": 0.3282,
+        "R2": 0.2785,
+        "R2_std": 0.0683
+      },
+      "Gradient Boosting Regressor": {
+        "MAE": 3.0782,
+        "MAE_std": 0.2881,
+        "RMSE": 4.077,
+        "RMSE_std": 0.337,
+        "R2": 0.1779,
+        "R2_std": 0.1174
+      },
+      "XGBoost Regressor": {
+        "MAE": 3.0402,
+        "MAE_std": 0.3146,
+        "RMSE": 3.9855,
+        "RMSE_std": 0.3843,
+        "R2": 0.2153,
+        "R2_std": 0.1221
+      }
+    },
+    "regression_test": {
+      "Linear Regression": {
+        "MAE": 3.3993,
+        "MSE": 19.0988,
+        "RMSE": 4.3702,
+        "R2": 0.0978,
+        "Max_Error": 11.6272
+      },
+      "Ridge Regression": {
+        "MAE": 3.3964,
+        "MSE": 18.8534,
+        "RMSE": 4.342,
+        "R2": 0.1094,
+        "Max_Error": 11.8807
+      },
+      "Random Forest Regressor": {
+        "MAE": 2.9047,
+        "MSE": 15.5671,
+        "RMSE": 3.9455,
+        "R2": 0.2646,
+        "Max_Error": 12.7653
+      },
+      "Gradient Boosting Regressor": {
+        "MAE": 2.9653,
+        "MSE": 15.5431,
+        "RMSE": 3.9425,
+        "R2": 0.2658,
+        "Max_Error": 11.8919
+      },
+      "XGBoost Regressor": {
+        "MAE": 2.9902,
+        "MSE": 15.3966,
+        "RMSE": 3.9238,
+        "R2": 0.2727,
+        "Max_Error": 11.7042
+      }
+    },
+    "classification_cv": {
+      "Logistic Regression": {
+        "Accuracy": 0.6138,
+        "Precision": 0.4364,
+        "Recall": 0.5395,
+        "F1_Score": 0.478,
+        "ROC_AUC": 0.6311
+      },
+      "Random Forest Classifier": {
+        "Accuracy": 0.6455,
+        "Precision": 0.4927,
+        "Recall": 0.2895,
+        "F1_Score": 0.3483,
+        "ROC_AUC": 0.6429
+      },
+      "Gradient Boosting Classifier": {
+        "Accuracy": 0.7025,
+        "Precision": 0.6002,
+        "Recall": 0.3462,
+        "F1_Score": 0.434,
+        "ROC_AUC": 0.6565
+      },
+      "XGBoost Classifier": {
+        "Accuracy": 0.6994,
+        "Precision": 0.6146,
+        "Recall": 0.3281,
+        "F1_Score": 0.416,
+        "ROC_AUC": 0.6632
+      }
+    },
+    "classification_test": {
+      "Logistic Regression": {
+        "Accuracy": 0.6962,
+        "Precision": 0.5294,
+        "Recall": 0.6923,
+        "F1_Score": 0.6,
+        "ROC_AUC": 0.7271,
+        "Brier_Score": 0.2106,
+        "Confusion_Matrix": [
+          [
+            37,
+            16
+          ],
+          [
+            8,
+            18
+          ]
+        ]
+      },
+      "Random Forest Classifier": {
+        "Accuracy": 0.7089,
+        "Precision": 0.5789,
+        "Recall": 0.4231,
+        "F1_Score": 0.4889,
+        "ROC_AUC": 0.7279,
+        "Brier_Score": 0.2017,
+        "Confusion_Matrix": [
+          [
+            45,
+            8
+          ],
+          [
+            15,
+            11
+          ]
+        ]
+      },
+      "Gradient Boosting Classifier": {
+        "Accuracy": 0.6582,
+        "Precision": 0.4615,
+        "Recall": 0.2308,
+        "F1_Score": 0.3077,
+        "ROC_AUC": 0.6509,
+        "Brier_Score": 0.2201,
+        "Confusion_Matrix": [
+          [
+            46,
+            7
+          ],
+          [
+            20,
+            6
+          ]
+        ]
+      },
+      "XGBoost Classifier": {
+        "Accuracy": 0.6835,
+        "Precision": 0.5333,
+        "Recall": 0.3077,
+        "F1_Score": 0.3902,
+        "ROC_AUC": 0.725,
+        "Brier_Score": 0.2005,
+        "Confusion_Matrix": [
+          [
+            46,
+            7
+          ],
+          [
+            18,
+            8
+          ]
+        ]
+      }
+    }
+  },
+  "academic_context_and_limitations": {
+    "prediction_scenario": "early_prediction",
+    "rationale_for_performance": "Prior grades G1 and G2 are excluded to eliminate data leakage and permit true early intervention. In educational data mining benchmarks (Cortez & Silva 2008), pre-enrollment background variables account for approx 25-30% of grade variance (R2 ~ 0.26-0.28, MAE ~ 2.90), as human examination grades depend on unobserved term dynamics.",
+    "decision_threshold_policy": "Default risk classification threshold is 0.50, configurable in EduPredictor. Predicted risks are indicators for supportive mentoring, not definitive performance labels."
+  }
+}

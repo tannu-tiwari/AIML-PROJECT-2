@@ -1,0 +1,106 @@
+{
+  "cv_5fold": {
+    "Logistic Regression": {
+      "Accuracy": 0.6138,
+      "Precision": 0.4364,
+      "Recall": 0.5395,
+      "F1_Score": 0.478,
+      "ROC_AUC": 0.6311
+    },
+    "Random Forest Classifier": {
+      "Accuracy": 0.6455,
+      "Precision": 0.4927,
+      "Recall": 0.2895,
+      "F1_Score": 0.3483,
+      "ROC_AUC": 0.6429
+    },
+    "Gradient Boosting Classifier": {
+      "Accuracy": 0.7025,
+      "Precision": 0.6002,
+      "Recall": 0.3462,
+      "F1_Score": 0.434,
+      "ROC_AUC": 0.6565
+    },
+    "XGBoost Classifier": {
+      "Accuracy": 0.6994,
+      "Precision": 0.6146,
+      "Recall": 0.3281,
+      "F1_Score": 0.416,
+      "ROC_AUC": 0.6632
+    }
+  },
+  "test_evaluation": {
+    "Logistic Regression": {
+      "Accuracy": 0.6962,
+      "Precision": 0.5294,
+      "Recall": 0.6923,
+      "F1_Score": 0.6,
+      "ROC_AUC": 0.7271,
+      "Brier_Score": 0.2106,
+      "Confusion_Matrix": [
+        [
+          37,
+          16
+        ],
+        [
+          8,
+          18
+        ]
+      ]
+    },
+    "Random Forest Classifier": {
+      "Accuracy": 0.7089,
+      "Precision": 0.5789,
+      "Recall": 0.4231,
+      "F1_Score": 0.4889,
+      "ROC_AUC": 0.7279,
+      "Brier_Score": 0.2017,
+      "Confusion_Matrix": [
+        [
+          45,
+          8
+        ],
+        [
+          15,
+          11
+        ]
+      ]
+    },
+    "Gradient Boosting Classifier": {
+      "Accuracy": 0.6582,
+      "Precision": 0.4615,
+      "Recall": 0.2308,
+      "F1_Score": 0.3077,
+      "ROC_AUC": 0.6509,
+      "Brier_Score": 0.2201,
+      "Confusion_Matrix": [
+        [
+          46,
+          7
+        ],
+        [
+          20,
+          6
+        ]
+      ]
+    },
+    "XGBoost Classifier": {
+      "Accuracy": 0.6835,
+      "Precision": 0.5333,
+      "Recall": 0.3077,
+      "F1_Score": 0.3902,
+      "ROC_AUC": 0.725,
+      "Brier_Score": 0.2005,
+      "Confusion_Matrix": [
+        [
+          46,
+          7
+        ],
+        [
+          18,
+          8
+        ]
+      ]
+    }
+  }
+}
